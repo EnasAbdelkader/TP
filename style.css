@@ -1,0 +1,598 @@
+@import url(Font/Cairo/Cairo-VariableFont_slnt\,wght.ttf);
+@import url(Font/Montserrat/Montserrat-Italic-VariableFont_wght.ttf);
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* scrollbar */
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: rgba(123, 121, 219, 0.648);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(24, 214, 214, 0.904);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(6, 100, 207, 0.788);
+}
+
+nav {
+    position: fixed;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.637);
+    background: url(background/3.jfif) no-repeat;
+    opacity: 0.8;
+    background-size: cover;
+    background-position: top;
+    z-index: 10;
+}
+
+#check {
+    display: none;
+}
+
+.checkbtn {
+    display: none;
+    transition: 0.5s;
+    color: white;
+    cursor: pointer;
+}
+
+nav h1 {
+    letter-spacing: 0.5rem;
+    color: white;
+    margin-left: 4rem;
+    margin-top: 20px;
+    cursor: pointer;
+    color: rgb(128, 226, 226);
+    transition: 0.5s;
+    font-weight: 600;
+    font-family: "Montserrat";
+}
+
+nav h1:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+nav ul {
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    padding-right: 1.5rem;
+    margin-left: 2rem;
+    height: max-content;
+    transition: 0.5s;
+    cursor: pointer;
+    border-right: 2px solid;
+    color: white;
+}
+
+nav ul li:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.5s;
+    color: white;
+}
+
+.main-home {
+    background: url(background/2.jfif);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 50rem;
+    background-attachment: fixed;
+}
+
+.info {
+    margin: auto;
+    width: 50%;
+    height: 75%;
+    color: aqua;
+    background-attachment: fixed;
+}
+
+.info h1,p {
+    font-family: "Cairo";
+}
+
+.info p {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.info input[type="button"] {
+    background: rgba(0, 255, 255, 0.452);
+    width: 7rem;
+    height: 3rem;
+    border: 2px solid aqua;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    color: black;
+    margin-top: 20px;
+}
+
+.info input[type="button"]:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+}
+
+@media screen and (min-width:1200px) {
+    .main-home {
+        background-position: center;
+        height: 46rem;
+        padding-top: 4rem;
+        line-height: 1.4;
+    }
+    nav h1 {
+        font-family: "Montserrat";
+    }
+    .info {
+    margin: auto;
+    width: 50%;
+    height: 75%;
+    color: aqua;
+    padding: 12rem 0px 0px 50px ;
+    background-attachment: fixed;
+    }
+}
+
+@media screen and (min-width:767px) and (max-width:1023px) {
+    .main-home {
+        background-position: center;
+
+        padding-top: 3rem;
+    }
+    nav {
+        height: 4rem;
+    }
+    nav h1 {
+        font-size: 18px;
+        margin-top: 15px;
+    }
+    nav ul {
+        font-size: 18px;
+        margin-top: 5px;
+    }
+    nav ul li a{
+        font-size: 15px;
+    }
+    .info {
+    margin: auto;
+    width: 60%;
+    height: 75%;
+    color: aqua;
+    padding: 10rem 0px 0px 50px ;
+    }
+    .info h1 {
+        font-size: 23px;
+    }
+    .info p {
+        font-size: 20px;
+    }
+    .info input[type="button"] {
+        width: 7rem;
+        height: 2.5rem;
+    }
+}
+
+@media screen and (max-width:852px) {
+    nav ul {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        width: 20vh;
+        height: 90vh;
+        font-size: 18px;
+        transition: 0.5s all;
+        background: url(background/1.jpg);
+        position: absolute;
+        top: 58px;
+        right: -10px;
+        line-height: 1.6;
+    }
+    nav .checkbtn {
+        display: block;
+        transition: 0.5s;
+        margin: 13px 20px 0px 0px;
+        font-size: 20px;
+    }
+    #check:checked ~ ul {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        width: 18rem;
+        height: 90vh;
+        transition: 0.5s all ease-in-out;
+        background: url(background/1.jpg);
+        position: absolute;
+        top: 58px;
+        right: -10px;
+    }
+    nav ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto auto auto 6rem ;
+        border-radius: 15px;
+        margin-top: 50px;
+        transition: 0.5s all;
+        text-align: center;
+        border: none;
+        width: 6.5rem;
+        height: 2.8rem;
+        font-size: 18px;
+    }
+    nav ul li a{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:766px) {
+    .main-home {
+        background-position: center;
+        background-size: cover;
+        height: 40rem;
+        padding-top: 2rem;
+    }
+    nav {
+        height: 4rem;
+        width: 100%;
+    }
+    nav h1 {
+        font-size: 16px;
+        margin-top: 15px;
+        margin-left: 2rem;
+    }
+    nav ul {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        width: 20vh;
+        height: 90vh;
+        font-size: 18px;
+        transition: 0.5s all;
+        background: url(background/1.jpg);
+        position: absolute;
+        top: 54px;
+        right: -10px;
+        line-height: 1.6;
+    }
+    nav .checkbtn {
+        display: block;
+        transition: 0.5s;
+        margin: 13px 20px 0px 0px;
+        font-size: 20px;
+    }
+    #check:checked ~ ul {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        width: 18rem;
+        height: 90vh;
+        transition: 0.5s all ease-in-out;
+        background: url(background/1.jpg);
+        position: absolute;
+        top: 54px;
+        right: -10px;
+    }
+    nav ul li:nth-child(1) {
+        margin-top: 30px;
+    }
+    nav ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto auto auto 6rem ;
+        border-radius: 15px;
+        margin-top: 40px;
+        transition: 0.5s all;
+        text-align: center;
+        border: none;
+        width: 6.5rem;
+        height: 2.8rem;
+        font-size: 18px;
+    }
+    nav ul li:hover {
+        background: rgba(0, 83, 83, 0.884);
+    }
+    .info {
+        margin: auto;
+        width: 60%;
+        height: 75%;
+        color: aqua;
+        padding: 10rem 0px 0px 50px ;
+    }
+    .info h1 {
+        font-size: 20px;
+    }
+    .info p {
+        font-size: 20px;
+    }
+    .info input[type="button"] {
+        width: 7rem;
+        height: 2.5rem;
+        font-size: 15px;
+    }
+
+}
+
+.main-info {
+    width: 100%;
+    height: 46rem;
+    padding-top: 2.8rem;
+    background: url(background/saw.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    background-attachment: fixed;
+}
+
+.info2 {
+    background: url(background/1.jpg);
+    width: 35rem;
+    height: 17rem;
+    margin-top: 2.25rem;
+    margin-left: 10rem;
+    display: flex;
+    justify-content: flex-start;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+.info2:hover {
+    transform: scale(1.03);
+    transition: 0.5s all ease-in-out;
+    box-shadow: 0px 0px 15px aqua;
+}
+
+.img-prod {
+    width: 50%;
+    transition: 0.5s all;
+}
+
+.info2 img {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+.info2 .des {
+    color: white;
+    font-size: 18px;
+    margin-left: 0.5rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
+    border-radius: 5px;
+    font-family: "Cairo";
+}
+
+.info2 .des p:nth-child(1) {
+    font-size: 20px;
+    font-family: "Cairo";
+}
+
+.info2 input[type="button"] {
+    width: 6rem;
+    height: 2rem;
+    margin-top: 3px;
+    background: rgba(0, 255, 255, 0.842);
+    border: 2px solid rgba(2, 221, 221, 0.897);
+    outline: none;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    transition: 0.5s all;
+}
+
+.info2 input[type="button"]:hover {
+    color: #fff;
+    transform: scale(1.1);
+    transition: 0.5s all ease-in-out;
+}
+
+.info3 {
+    background: url(background/1.jpg);
+    font-family: "Cairo";
+    width: 35rem;
+    height: 17rem;
+    margin-top: 2.25rem;
+    margin-left: 10rem;
+    display: flex;
+    justify-content: flex-start;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+.info3:hover {
+    transform: scale(1.03);
+    transition: 0.5s all ease-in-out;
+    box-shadow: 0px 0px 15px aqua;
+}
+
+.img-prod2 {
+    width: 50%;
+    transition: 0.5s all;
+}
+
+.info3 img {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+.info3 .des {
+    color: white;
+    font-size: 18px;
+    margin-left: 0.5rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
+    border-radius: 5px;
+}
+
+.info3 .des p:nth-child(1) {
+    font-size: 20px;
+}
+
+.info3 input[type="button"] {
+    width: 6rem;
+    height: 2rem;
+    margin-top: 3px;
+    background: rgba(0, 255, 255, 0.842);
+    border: 2px solid rgba(2, 221, 221, 0.897);
+    outline: none;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    transition: 0.5s all;
+}
+
+.info3 input[type="button"]:hover {
+    color: #fff;
+    transform: scale(1.1);
+    transition: 0.5s all ease-in-out;
+}
+
+@media screen and (max-width: 1024px) {
+    .main-home,
+    .main-info {
+        background-position: center;
+        background-size: center;
+    }
+}
+
+@media screen and (min-width: 852px) and (max-width: 1024px) {
+    .info2, 
+    .info3 {
+        width: 28rem;
+        height: 17rem;
+        line-height: 1.5;
+        font-size: 10px;
+    }
+    .info3 .des,
+    .info2 .des{
+        font-size: 15px;
+    }
+    .info3 .des p:nth-child(1),
+    .info2 .des p:nth-child(1)  {
+        font-size: 18px;
+    }
+    .info2 input[type="button"],
+    .info3 input[type="button"] {
+        font-size: 12px;
+        width: 5rem;
+        height: 1.7rem;
+    }
+}
+
+@media screen and (max-width:851px){
+    .info2, 
+    .info3 {
+        width: 28rem;
+        height: 17rem;
+        line-height: 1.5;
+        font-size: 10px;
+    }
+    .info3 .des,
+    .info2 .des{
+        font-size: 15px;
+    }
+    .info3 .des p:nth-child(1),
+    .info2 .des p:nth-child(1)  {
+        font-size: 18px;
+    }
+    .info2 input[type="button"],
+    .info3 input[type="button"] {
+        font-size: 12px;
+        width: 5rem;
+        height: 1.7rem;
+    }
+}
+
+.footer {
+    width: 100%;
+    height: 17rem;
+    background: url(background/1.jpg);
+    display: flex;
+}
+
+.contact-info {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-info p:nth-child(1) {
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: 2rem;
+    color: aqua;
+}
+
+.contact-info p:nth-child(2) {
+    font-size: 20px;
+    color: aqua;
+}
+
+.info-logo img {
+    width: 50%;
+    height: 100%;
+}
+
+.icons-contact i {
+    margin-left: 30px;
+    transition: 0.5s all;
+    cursor: pointer;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.icons-contact i:nth-child(1){
+    color: rgba(255, 255, 255, 0.692);
+}
+.icons-contact i:nth-child(2) {
+    color: blue;
+}
+.icons-contact i:nth-child(3) {
+    color: green;
+}
+.icons-contact i:nth-child(4) {
+    color: purple;
+}
+.icons-contact i:hover {
+    transition: 0.5s ease-in-out;
+    transform: scale(1.1);
+}
